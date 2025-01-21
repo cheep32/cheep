@@ -12,6 +12,10 @@ $(function () {
         monMove = true, // 怪物移動變數
         windowHalfHeight = ($(window).height() / 2) + 'px', // 整個畫面高度的一半
         windowHalfWidth = ($(window).width() / 2) + 'px', // 整個畫面寬度的一半
+        windowHalfHeight1 = ($(window).height() / 2 + 10) + 'px', // 整個畫面高度的一半
+        windowHalfWidth1 = ($(window).width() / 2 + 10) + 'px', // 整個畫面寬度的一半
+        windowHalfHeight2 = ($(window).height() / 2 - 10) + 'px', // 整個畫面高度的一半
+        windowHalfWidth2 = ($(window).width() / 2 - 10) + 'px', // 整個畫面寬度的一半
         mon1, // 怪物編號變數
         mon2,
         mon3,
@@ -133,16 +137,17 @@ $(function () {
 
         setInterval(function () {
             let monY = $('.mon-y').css('top'); // 縱著跑的怪物
-            if (monY == windowHalfHeight) { //當怪物跑到中間的時候
+            if (monY > windowHalfHeight2 && monY < windowHalfHeight1) { //當怪物跑到中間的時候
                 monMove = false; // 怪物移動變數為假
             }
         }, 10) // 每10ms掃描一次怪物位置
 
         setInterval(function () {
             let monX = $('.mon-x').css('left'); // 橫著跑的怪物
-            if (monX == windowHalfWidth) { //當怪物跑到中間的時候
+            if (monX > windowHalfWidth2 && monX < windowHalfWidth1) { //當怪物跑到中間的時候
                 monMove = false; // 怪物移動變數為假
             }
+            console.log(monMove)
         }, 10) // 每10ms掃描一次怪物位置
 
         // Mon
