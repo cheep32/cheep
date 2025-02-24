@@ -57,18 +57,11 @@ table {
     --white: #fff;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    background: url('images/gameback.png') no-repeat center center fixed;
-    background-size: cover;
+body {
+    background-color: var(--gray);
     color: var(--secondary);
-    font-family: sans-serif;
-  }
+    font-family: sans-serif; /* 改字型 */
+}
 
 a {
     color: var(--primary);
@@ -192,4 +185,4 @@ a {
     width: 44%;
     margin-left: -22%;
     cursor: pointer;
-}        
+}
