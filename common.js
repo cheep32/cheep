@@ -195,7 +195,7 @@ $(function () {
     $('.mon').on('click', function () {
         $(this).hide().stop(); // 當怪物被點到，該怪物會被隱藏然後停止動畫。
         score = score + 5; // 加5分
-        if (score >= 20) {
+        if (score >= 200) {
             monMove = false;
             gameRunning = false;
             $('.game').hide();
